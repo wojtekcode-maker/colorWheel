@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  transition: .2s linear;
+}
+
+.refresh {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100px;
+  width: 180px;
+}
+
+.refresh:hover>p {
+  animation: refreshAnimation .2s linear 1 both;
+}
+
+.refresh p {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  line-height: 80px;
+  font-size: 26px;
+  font-family: 'Londrina Outline',
+    cursive,
+    arial;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+i.fas {
+  position: absolute;
+  font-size: 40px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+h1 {
+  line-height: 25vh;
+  font-size: 60px;
+  font-family: 'Londrina Outline',
+    cursive, arial;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+div.wheel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.aqua {
+  background-color: aqua;
+}
+
+
+div.red {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(-60deg);
+  transform-origin: 0 0;
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  cursor: url('img/redCursor.png'), pointer;
+}
+
+div.green {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: rotate(calc(2 * -60deg));
+  transform-origin: 0 0;
+  width: 50%;
+  height: 100%;
+  background-color: green;
+  cursor: url('img/greenCursor.png'),
+    pointer;
+}
+
+div.blue {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: rotate(calc(3 * -60deg));
+  transform-origin: 0 0;
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+  cursor: url('img/blueCursor.png'),
+    pointer;
+}
+
+div.yellow {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: rotate(calc(4 * -60deg));
+  transform-origin: 0 0;
+  width: 50%;
+  height: 100%;
+  background-color: yellow;
+  cursor: url('img/yellowCursor.png'),
+    pointer;
+}
+
+div.pink {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  transform: rotate(calc(5 * -60deg));
+  transform-origin: 0 0;
+  width: 50%;
+  height: 100%;
+  background-color: pink;
+  cursor: url('img/pinkCursor.png'),
+    pointer;
+}
+
+div.aqua {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: skew(0deg, 30deg);
+  transform-origin: 0 0;
+  width: 50%;
+  height: 100%;
+  background-color: aqua;
+  cursor: url('img/aquaCursor.png'),
+    pointer;
+}
+
+@keyframes refreshAnimation {
+  0% {
+    left: 180px;
+    opacity: 0;
+  }
+
+  40% {
+    left: 35px;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 0;
+  }
+}
